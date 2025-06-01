@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESS G. Corporation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
+        }
+
+        .section1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            min-height: 300px;
+            background-image: url('1.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+        }
+
+        .section1-content {
+            padding: 40px 30px;
+        }
+
+        .title {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .subtitle {
+            max-width: 200px;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 150%;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 400px;
+            background-image: url('2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section2-inner {
+            padding: 10px;
+        }
+
+        .glass {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .glass-title {
+            font-size: 2em;
+        }
+
+        .glass-text {
+            font-size: 0.8em;
+        }
+
+        .section3 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 40px;
+            gap: 25px;
+            flex-wrap: wrap;
+            background-image: url('3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section3-left {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+
+        .section3-left h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 6px;
+            color: #ffffff;
+        }
+
+        .section3-right {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            /* Glassmorphism effect */
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            padding: 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-block {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+            padding: 3px 20px;
+            border-radius: 10px;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .info-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .info-title {
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+        .info-desc {
+            font-size: 0.85em;
+            color: #fff;
+        }
+
+
+        @media screen and (max-width: 394px) {
+            .glass-title {
+                font-size: 1.4em;
+            }
+
+            .glass-text {
+                font-size: 0.7em;
+            }
+        }
+
+        .section4 {
+            padding: 60px 30px;
+            text-align: center;
+            background-image: url('4.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section4-title {
+            font-size: 2.4em;
+            margin-bottom: 40px;
+            color: #fff;
+            font-family: 'Montserrat';
+            font-weight: 500;
+        }
+
+        .clients-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .client-card {
+            width: 200px;
+            height: 220px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .client-logo img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .client-name {
+            font-size: 1em;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .section5 {
+            padding: 60px 30px;
+            background-color: #f7f7f7;
+            text-align: center;
+            background-image: url('5.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section5-title {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        .ceo-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .ceo-image img {
+            width: 250px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .ceo-message {
+            max-width: 400px;
+            text-align: justify;
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 1.1em;
+            color: #fff;
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+
+        .section6 {
+            width: 100%;
+            padding: 50px 30px;
+            background-color: #e9e9e9;
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('6.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: #fff;
+        }
+
+        .section6-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 0px 15%;
+        }
+
+        .section6-left h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .section6-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: right;
+            padding-top: 80px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            font-size: 0.95em;
+            color: #fff;
+        }
+
+        .contact-info {
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+        .icons8-facebook {
+            margin-top: 1px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSIyNDBweCIgaGVpZ2h0PSIyNDBweCI+PHBhdGggZmlsbD0iIzNGNTFCNSIgZD0iTTQyLDM3YzAsMi43NjItMi4yMzgsNS01LDVIMTFjLTIuNzYxLDAtNS0yLjIzOC01LTVWMTFjMC0yLjc2MiwyLjIzOS01LDUtNWgyNmMyLjc2MiwwLDUsMi4yMzgsNSw1VjM3eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0zNC4zNjgsMjVIMzF2MTNoLTVWMjVoLTN2LTRoM3YtMi40MWMwLjAwMi0zLjUwOCwxLjQ1OS01LjU5LDUuNTkyLTUuNTlIMzV2NGgtMi4yODdDMzEuMTA0LDE3LDMxLDE3LjYsMzEsMTguNzIzVjIxaDRMMzQuMzY4LDI1eiIvPjwvc3ZnPg==') 50% 50% no-repeat;
+            background-size: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .section6-container {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 20px;
+            }
+
+            .section6-right {
+                margin-top: 15px;
+                text-align: left;
+                align-items: flex-start;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section 1 -->
+    <div class="section1">
+        <div class="section1-content">
+            <div class="title">
+                ESS G. Corporation
+            </div>
+            <div class="subtitle">
+                Accessories Developed Here—Local Craftsmanship, Global Standards.
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section2">
+        <div class="section2-inner">
+            <div class="glass">
+                <div class="glass-title">
+                    What We<br />Do?
+                </div>
+                <div class="glass-text">
+                    ESS G. Corporation manufactures the full spectrum of garment accessories—everything from bundle-cut paper to buttons and interlinings—right here in Bangladesh, eliminating what was once 100% import dependency by local factories. By producing domestically, we remove customs hurdles, slash lead times, keep costs low, and ensure that money stays within the country.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section3">
+        <!-- Left Column -->
+        <div class="section3-left">
+            <h2>Why Choose Us?</h2>
+        </div>
+
+        <!-- Right Column: 3 Rows -->
+        <div class="section3-right">
+            <div class="info-block">
+                <img src="bdflag.webp" alt="Icon 1" class="info-icon" />
+                <div class="info-texts">
+                    <div class="info-title">Made in Bangladesh</div>
+                    <div class="info-desc">Global-quality “Made in Bangladesh” trims now match international standards, ensuring top-tier accessories on every order.</div>
+                </div>
+            </div>
+            <div class="info-block">
+                <img src="settings.png" alt="Icon 2" class="info-icon" />
+                <div class="info-texts">
+                    <div class="info-title">Lowest-cost production</div>
+                    <div class="info-desc">Lowest-cost production leveraging Bangladesh’s competitive labor and manufacturing ecosystem for maximized savings.</div>
+                </div>
+            </div>
+            <div class="info-block">
+                <img src="verified.png" alt="Icon 3" class="info-icon" />
+                <div class="info-texts">
+                    <div class="info-title">Customs-free, hassle-free supply</div>
+                    <div class="info-desc">Customs-free, hassle-free supply that sidesteps import duties and recent tariffs on fashion components.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section4">
+        <h2 class="section4-title">Our Clients</h2>
+        <div class="clients-container">
+            <div class="client-card">
+                <div class="client-logo">
+                    <img src="improve.png" alt="Client 1 Logo" />
+                </div>
+                <div class="client-name">Improve Accessories Ltd.</div>
+            </div>
+            <div class="client-card">
+                <div class="client-logo">
+                    <img src="fakir.png" alt="Client 2 Logo" />
+                </div>
+                <div class="client-name">Fakir Apparels Ltd.</div>
+            </div>
+            <div class="client-card">
+                <div class="client-logo">
+                    <img src="target.png" alt="Client 3 Logo" />
+                </div>
+                <div class="client-name">Target Sweater Inds. Ltd.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section5">
+        <h2 class="section5-title">Meet Our CEO</h2>
+        <div class="ceo-container">
+            <!-- Left: CEO Image -->
+            <div class="ceo-image">
+                <img src="ceo.png" alt="CEO Photo" />
+            </div>
+
+            <!-- Right: CEO Message -->
+            <div class="ceo-message">
+                <p>
+                    I’m MD. Nazmul Huda, CEO of ESS G. Corporation. With ten years in garment-accessory manufacturing, we proudly produce the full spectrum of trims—zippers, buttons, elastics, and bundle-cut paper—right here in Bangladesh. Keeping production local lets us cut lead times from months to weeks, eliminate customs delays, and offer top-quality products at competitive prices.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section6">
+        <div class="section6-container">
+            <div class="section6-left">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="section6-right">
+                <div class="contact-item">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-info">+880 1234 567 890</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-info">info@essgcorp.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Social</div>
+                    <div class="contact-info">
+                        <a href="https://facebook.com/essgcorp" target="_blank">
+                            <div class="icons8-facebook"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
